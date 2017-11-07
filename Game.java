@@ -1,5 +1,5 @@
 /*
-this class is designed to store data in playing games
+this class is designed to store data generated in playing games
 and make the rule of the playing as well
  */
 public class Game {
@@ -23,7 +23,6 @@ public class Game {
         return isBlack;
     }
 
-    //change to the other side to play
     public void inTurn(){
         this.isBlack = !this.isBlack;
     }
@@ -38,7 +37,6 @@ public class Game {
         return true;
     }
 
-    //the most important part
     //check whether one side has won the game
     public boolean checkWin(int i,int j){
         if(line(i,j)||column(i,j)||leftR(i,j)||rightL(i,j))
