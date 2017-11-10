@@ -53,10 +53,7 @@ public class GameRule {
                 cx++;
         for(int m = i-1;m>=0 && board[m][j]==board[i][j];--m)
                 cx++;
-        if(cx>=3)
-            return true;
-        else
-            return false;
+        return cx>=3;
     }
     public boolean column(int i,int j){
         int cx = 0;
@@ -64,10 +61,7 @@ public class GameRule {
                 cx++;
         for(int n = j-1;n>=0 && board[i][n]==board[i][j];--n)
                 cx++;
-        if(cx>=3)
-            return true;
-        else
-            return false;
+        return cx>=3;
     }
     public boolean leftR(int i,int j){
         int cx = 0;
@@ -75,10 +69,7 @@ public class GameRule {
                 cx++;
         for(int m=i-1,n=j-1;m>=0 && n>=0 && board[m][n]==board[i][j];--m,--n)
                 cx++;
-        if(cx>=3)
-            return true;
-        else
-            return false;
+        return cx>=3;
     }
     public boolean rightL(int i,int j){
         int cx = 0;
@@ -86,10 +77,7 @@ public class GameRule {
                 cx++;
         for(int m=i+1,n=j-1;m<7 && n>=0 && board[m][n]==board[i][j];++m,--n)
                 cx++;
-        if(cx>=3)
-            return true;
-        else
-            return false;
+        return cx>=3;
     }
 
     //change the data of game when one side drop the chess
